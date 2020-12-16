@@ -10,7 +10,7 @@ import com.example.galleryitems.util.list_item.ListItemBindings.bindListItems
 object MainBindings {
 
     @JvmStatic
-    @BindingAdapter("app:images_list")
+    @BindingAdapter("app:main_profiles")
     fun RecyclerView.bindMainImages(allImages: List<String>?) {
 
         if (!allImages.isNullOrEmpty()) {

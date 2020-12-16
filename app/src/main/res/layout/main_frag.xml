@@ -13,6 +13,5 @@
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:images_list="@{viewModel.imagesLiveData}" />
+        app:main_profiles="@{viewModel.imagesLiveData}" />
 </layout>

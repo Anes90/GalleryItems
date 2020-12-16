@@ -4,15 +4,13 @@ import android.app.Application
 import android.database.Cursor
 import android.net.Uri
 import android.provider.MediaStore
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
 @Suppress("DEPRECATION")
-class MainViewModel(application: Application) : ViewModel(), CoroutineScope {
-
-    val testArray = mutableListOf("1", "2", "3", "4")
+class MainViewModel(application: Application) : AndroidViewModel(application), CoroutineScope {
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -31,7 +29,7 @@ class MainViewModel(application: Application) : ViewModel(), CoroutineScope {
      * @return ArrayList with images Path
      */
     internal fun loadImagesfromSDCard(application: Application): ArrayList<String> {
-        val uri: Uri = android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+        val uri: Uri = android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI
         val cursor: Cursor?
         val column_index_data: Int
         val column_index_folder_name: Int
