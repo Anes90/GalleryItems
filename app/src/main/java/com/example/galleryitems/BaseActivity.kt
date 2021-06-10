@@ -13,5 +13,6 @@ abstract class BaseActivity : AppCompatActivity() {
             ViewModelFactory(application, this)
         ).get(viewModelClass)
 
+    
     //Test of the Jira + GitHub integration
 }
